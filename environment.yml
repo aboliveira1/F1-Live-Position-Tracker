@@ -1,0 +1,10 @@
+# Optional: a conda environment for development (the app itself doesn't need conda;
+# run_f1_tracker.py sets up its own .venv). Create with: conda env create -f environment.yml
+name: f1tracker
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -r requirements-dev.txt

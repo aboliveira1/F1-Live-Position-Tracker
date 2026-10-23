@@ -1,0 +1,13 @@
+[project]
+name = "f1tracker"
+version = "1.0.0"
+description = "Real-time and replay visualisation of Formula 1 car positions on a track map"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = ["network: talks to the real OpenF1 API (run with F1TRACKER_NETWORK_TESTS=1)"]
+filterwarnings = ["ignore:Using `httpx` with `starlette.testclient`"]
